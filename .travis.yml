@@ -1,0 +1,11 @@
+jobs:
+  include:
+    - stage: unit tests
+      script: "echo 'unit test'"
+    - stage: deploy to alpha
+      language: objective-c
+      osx_image: xcode8.3
+      install:
+        - bundle install
+      script:
+      - fastlane beta
