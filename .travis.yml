@@ -10,8 +10,12 @@ jobs:
         - build-tools-28.0.0
         - android-28
         - extra
+      licenses:
+        - 'android-sdk-preview-license-52d11cd2'
+        - 'android-sdk-license-.+'
+        - 'google-gdk-license-.+'
       install:
         - bundle install
       script:
-#        - bundle exec fastlane beta
+#        - bundle ex ec fastlane beta
         - ./gradlew assembleRelease
