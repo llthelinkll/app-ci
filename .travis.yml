@@ -3,15 +3,14 @@ jobs:
     - stage: unit tests
       script: "echo 'unit test'"
     - stage: deploy to alpha
-      language: objective-c
-      osx_image: xcode8.3
+      language: android
+      sudo: required
+      jdk: oraclejdk8
+      components:
+        - build-tools-28.0.0
+        - android-28
+        - extra
       install:
         - bundle install
       script:
-#      - export LC_ALL=en_US.UTF-8
-#      - export LANG=en_US.UTF-8
-#      - ls
-#      - gem install fastlane
-#      - rvm use system
-#      - unset -f cd
-      - fastlane beta
+        - fastlane beta
