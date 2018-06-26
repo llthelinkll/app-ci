@@ -8,10 +8,10 @@ jobs:
       install:
         - bundle install
       script:
-      - export LC_ALL=en_US.UTF-8
-      - export LANG=en_US.UTF-8
-      - ls
-      - gem install fastlane
-      - rvm use system
-      - unset -f cd
+#      - export LC_ALL=en_US.UTF-8
+#      - export LANG=en_US.UTF-8
+#      - ls
+#      - gem install fastlane
+#      - rvm use system
+#      - unset -f cd
       - fastlane beta
