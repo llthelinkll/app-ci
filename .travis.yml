@@ -13,4 +13,5 @@ jobs:
       install:
         - bundle install
       script:
-        - bundle exec fastlane beta
+#        - bundle exec fastlane beta
+        - ./gradlew assembleRelease
