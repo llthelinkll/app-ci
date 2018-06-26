@@ -8,4 +8,5 @@ jobs:
       install:
         - bundle install
       script:
+      - ls
       - fastlane beta
