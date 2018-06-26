@@ -14,6 +14,7 @@ jobs:
         - 'android-sdk-preview-license-52d11cd2'
         - 'android-sdk-license-.+'
         - 'google-gdk-license-.+'
+        - 'platforms;android-.+'
       install:
         - bundle install
       script:
