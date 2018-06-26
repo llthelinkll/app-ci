@@ -11,5 +11,9 @@ jobs:
       - export LC_ALL=en_US.UTF-8
       - export LANG=en_US.UTF-8
       - ls
-      - fastlane init
+      - gem install fastlane
+      - rvm use system
+      - gem install CFPropertyList
+      - gem install sqlite3
+      - rvm use 2.0.0
       - fastlane beta
