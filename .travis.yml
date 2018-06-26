@@ -13,5 +13,4 @@ jobs:
       - ls
       - gem install fastlane
       - rvm use system
-      - fastlane list
-      - fastlane beta
+      - bundle exec fastlane beta
