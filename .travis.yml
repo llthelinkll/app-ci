@@ -13,7 +13,5 @@ jobs:
       - ls
       - gem install fastlane
       - rvm use system
-      - gem install CFPropertyList
-      - gem install sqlite3
-      - rvm use 2.0.0
+      - fastlane list
       - fastlane beta
