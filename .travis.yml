@@ -13,4 +13,4 @@ jobs:
       install:
         - bundle install
       script:
-        - fastlane beta
+        - bundle exec fastlane beta
