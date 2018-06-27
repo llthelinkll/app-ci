@@ -29,6 +29,8 @@ jobs:
     - addon-google_apis-google-$ANDROID_API_LEVEL
     install:
     - bundle install
+    before_script:
+    - tools/bin/sdkmanager --licenses
     script:
     - "./gradlew assembleRelease"
 before_install:
