@@ -7,14 +7,11 @@ jobs:
     sudo: required
     jdk: oraclejdk8
     components:
+    - tools
     - build-tools-27.0.3
     - android-28
+    - platform-tools
     - extra
-    licenses:
-    - android-sdk-preview-license-52d11cd2
-    - android-sdk-license-.+
-    - google-gdk-license-.+
-    - platforms;android-.+
     install:
     - bundle install
     script:
