@@ -20,6 +20,11 @@ jobs:
     script:
     - "./gradlew assembleRelease"
 before_install:
-- mkdir keystore
-- openssl aes-256-cbc -K $encrypted_d7cb9d5df8de_key -iv $encrypted_d7cb9d5df8de_iv -in fastlane.json.enc -out fastlane.json -d
-- openssl aes-256-cbc -K $encrypted_d7cb9d5df8de_key -iv $encrypted_d7cb9d5df8de_iv -in android.jks.enc -out keystore/android.jks -d
+- openssl aes-256-cbc -K $encrypted_d7cb9d5df8de_key -iv $encrypted_d7cb9d5df8de_iv
+  -in secrets.tar.enc -out secrets.tar -d
+- tar xvf secrets.tar
+#- mkdir keystore
+#- openssl aes-256-cbc -K $encrypted_d7cb9d5df8de_key -iv $encrypted_d7cb9d5df8de_iv
+#  -in fastlane.json.enc -out fastlane.json -d
+#- openssl aes-256-cbc -K $encrypted_d7cb9d5df8de_key -iv $encrypted_d7cb9d5df8de_iv
+#  -in android.jks.enc -out keystore/android.jks -d
