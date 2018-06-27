@@ -29,6 +29,7 @@ jobs:
     - addon-google_apis-google-$ANDROID_API_LEVEL
     install:
     - bundle install
+    - /usr/local/android-sdk "build-tools;27.0.3"
     script:
     - "./gradlew assembleRelease"
 before_install:
