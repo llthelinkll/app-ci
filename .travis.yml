@@ -17,6 +17,9 @@ jobs:
         - 'platforms;android-.+'
       install:
         - bundle install
+        - fastlane init
+        - fastlane supply init
       script:
 #        - bundle ex ec fastlane beta
-        - ./gradlew assembleRelease
+#        - ./gradlew assembleRelease
+        - fastlane beta
