@@ -1,25 +1,24 @@
 jobs:
   include:
-    - stage: unit tests
-      script: "echo 'unit test'"
-    - stage: deploy to alpha
-      language: android
-      sudo: required
-      jdk: oraclejdk8
-      components:
-        - build-tools-28.0.0
-        - android-28
-        - extra
-      licenses:
-        - 'android-sdk-preview-license-52d11cd2'
-        - 'android-sdk-license-.+'
-        - 'google-gdk-license-.+'
-        - 'platforms;android-.+'
-      install:
-        - bundle install
-#        - fastlane init
-#        - fastlane supply init
-      script:
-#        - bundle ex ec fastlane beta
-#        - ./gradlew assembleRelease
-        - fastlane beta
+  - stage: unit tests
+    script: echo 'unit test'
+  - stage: deploy to alpha
+    language: android
+    sudo: required
+    jdk: oraclejdk8
+    components:
+    - build-tools-28.0.0
+    - android-28
+    - extra
+    licenses:
+    - android-sdk-preview-license-52d11cd2
+    - android-sdk-license-.+
+    - google-gdk-license-.+
+    - platforms;android-.+
+    install:
+    - bundle install
+    script:
+    - "./gradlew assembleRelease"
+before_install:
+- openssl aes-256-cbc -K $encrypted_d7cb9d5df8de_key -iv $encrypted_d7cb9d5df8de_iv
+  -in android.jks.enc -out keystore/android.jks -d
