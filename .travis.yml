@@ -40,6 +40,8 @@ jobs:
       - echo y | sdkmanager "lldb;3.1"
     script:
 #      - "./gradlew assembleRelease"
+      - bundle exec fastlane env
+      - bundle exec fastlane ent2
       - bundle exec fastlane init
       - bundle exec fastlane supply init
       - bundle exec fastlane beta
