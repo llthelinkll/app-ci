@@ -42,5 +42,6 @@ jobs:
 #      - "./gradlew assembleRelease"
       - bundle exec fastlane init
       - bundle exec fastlane supply --package_name pw.secretbase.www.appci --metada fastlane/metadata/android/ init
-      - bundle exec fastlane alpha
+      - bundle exec fastlane supply init
+      - bundle exec fastlane android alpha
 
