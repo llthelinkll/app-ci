@@ -8,3 +8,8 @@
 /build
 /captures
 .externalNativeBuild
+secrets.tar
+keystore/*
+app/debug/*
+app/release/*
+fastlane.json
