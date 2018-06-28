@@ -43,7 +43,8 @@ platform :android do
 	build_type: 'Release'
 	)
     upload_to_play_store(
-	track: 'alpha'
+	track: 'alpha',
+	package_name: 'pw.secretbase.www.appci'
 	)
   end
 
