@@ -41,6 +41,6 @@ jobs:
     script:
 #      - "./gradlew assembleRelease"
       - bundle exec fastlane init
-      - bundle exec fastlane supply --package_name pw.secretbase.www.appci init
+      - bundle exec fastlane supply --package_name pw.secretbase.www.appci --metada fastlane/metadata/android/ init
       - bundle exec fastlane alpha
 
