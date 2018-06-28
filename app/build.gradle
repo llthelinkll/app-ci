@@ -18,8 +18,8 @@ android {
         applicationId "pw.secretbase.www.appci"
         minSdkVersion 15
         targetSdkVersion 28
-        versionCode 341492
-        versionName '1.1.5'
+        versionCode 341495
+        versionName '1.1.6'
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         externalNativeBuild {
             cmake {
