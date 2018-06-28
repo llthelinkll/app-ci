@@ -34,5 +34,5 @@ jobs:
       - echo y | sdkmanager "lldb;3.1"
     script:
       - "./gradlew assembleRelease"
-#      - fastlane beta
+      - fastlane beta
 
