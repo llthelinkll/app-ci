@@ -30,8 +30,11 @@ jobs:
       - gem update --system
       - gem install fastlane --no-rdoc --no-ri --no-document --quiet
       - pip install --user awscli
+      - export LC_ALL=en_US.UTF-8
+      - export LANG=en_US.UTF-8
     install:
       - bundle install
+      - bundle update fastlane
       - echo y | sdkmanager "ndk-bundle"
       - echo y | sdkmanager "cmake;3.6.4111459"
       - echo y | sdkmanager "lldb;3.1"
