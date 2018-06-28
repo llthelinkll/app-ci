@@ -11,13 +11,14 @@ jobs:
     language: android
     sudo: required
     jdk: oraclejdk8
-    components:
-    - tools
-    - platform-tools
-    - tools
-    # The BuildTools version used by your project
-    - build-tools-28.0.0
-    - android-28
+    android:
+      components:
+      - tools
+      - platform-tools
+      - tools
+      # The BuildTools version used by your project
+      - build-tools-28.0.0
+      - android-28
     install:
     - bundle install
     script:
