@@ -7,6 +7,6 @@ JNICALL
 Java_pw_secretbase_www_appci_MainActivity_stringFromJNI(
         JNIEnv *env,
         jobject /* this */) {
-    std::string hello = "Hello World v3 from C++";
+    std::string hello = "Hello World v100 from C++";
     return env->NewStringUTF(hello.c_str());
 }
