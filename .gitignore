@@ -13,3 +13,4 @@ keystore/*
 app/debug/*
 app/release/*
 fastlane.json
+keystore.properties

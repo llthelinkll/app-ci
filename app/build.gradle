@@ -4,13 +4,18 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+def keystorePropertiesFile = rootProject.file("keystore.properties")
+def keystoreProperties = new Properties()
+keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+
+
 android {
     signingConfigs {
         config {
-            keyAlias 'AndroidKey'
-            keyPassword 'mos02350'
-            storeFile file('../keystore/android.jks')
-            storePassword 'mos02350'
+            keyAlias keystoreProperties['keyAlias']
+            keyPassword keystoreProperties['keyPassword']
+            storeFile rootProject.file(keystoreProperties['storeFile'])
+            storePassword keystoreProperties['storePassword']
         }
     }
     compileSdkVersion 28
@@ -18,8 +23,8 @@ android {
         applicationId "pw.secretbase.www.appci"
         minSdkVersion 15
         targetSdkVersion 28
-        versionCode 341495
-        versionName '1.1.6'
+        versionCode 341496
+        versionName '1.1.7'
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         externalNativeBuild {
             cmake {
